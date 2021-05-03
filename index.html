@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ttt.css">
+    <title>Pokémon Tac Toe</title>
+</head>
+<body>
+    <!--battle music-->
+    <audio id="mySong" controls loop>
+        <source src="battle.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--gameboard-->
+    <div id="gameboard">
+        <h1 class="title">Pokémon <span>Tac</span> Toe</h1>
+        <div class="status-action">
+          <div class="status">Charmander is next</div>
+          <div class="reset">Reset</div>
+        </div>
+
+        <!--cells-->
+        <div class="game-grid">
+            <div class="game-cell"></div> <!--first cell-->
+            <div class="game-cell"></div> <!--second cell-->
+            <div class="game-cell"></div> <!--third cell-->
+            <div class="game-cell"></div> <!--fourth cell-->
+            <div class="game-cell"></div> <!--fifth cell-->
+            <div class="game-cell"></div> <!--sixth cell-->
+            <div class="game-cell"></div> <!--seventh cell-->
+            <div class="game-cell"></div> <!--eighth cell-->
+            <div class="game-cell"></div> <!--ninth cell-->
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

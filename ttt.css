@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#mySong {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+}
+
+body {
+  background-color: #24292c;
+  color: black;
+  display: flex;
+  font-family: "Press Start 2P";
+  justify-content: center;
+}
+
+#gameboard {
+  background-image: url("BG.jpg");
+  width: auto;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px beige;
+}
+
+.title {
+  text-align: center;
+}
+
+.title span {
+  color: yellow;
+}
+
+.status-action {
+  display: flex;
+  margin-top: 25px;
+  font-size: 25px;
+  font-family: "Press Start 2P";
+  justify-content: space-between;
+}
+
+.status span {
+  color: white;
+}
+.reset {
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: white;
+}
+
+.game-grid {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 15px;
+}
+
+.game-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+  border: 2px dotted black;
+  cursor: pointer;
+}
+
+.x,
+.o {
+  cursor: auto;
+}
+
+.x::after {
+  content: url("charmander.png");
+  padding-left: 20px;
+  max-width: 200px;
+}
+
+.o::after {
+  content: url("schiggy.png");
+  padding-right: 10px;
+  max-width: 200px;
+}
+
+.won::after {
+  background-color: red;
+}
+
+@media only screen and (max-width: 1024px) {
+  .game-grid {
+    margin-top: 25px;
+    grid-gap: 10px;
+  }
+
+  .game-cell {
+    height: 170px;
+    width: 170px;
+    justify-content: center;
+  }
+
+  .x::after {
+    height: auto;
+    width: 200px;
+  }
+
+  .o::after {
+    height: auto;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #gameboard {
+    margin: 25px;
+    padding: 25px;
+    width: auto;
+    height: auto;
+  }
+
+  .game-cell {
+    height: 120px;
+    width: 120px;
+    align-items: center;
+  }
+
+  .x::after {
+    width: 100px;
+  }
+
+  .o::after {
+    width: 100px;
+  }
+}
