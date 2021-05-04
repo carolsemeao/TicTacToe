@@ -80,9 +80,9 @@ const checkGameStatus = () => {
     } else {
         xIsNext = !xIsNext;
         if (xIsNext) {
-          statusDiv.innerHTML = `${xSymbol} is next`;
+          statusDiv.innerHTML = `${xSymbol} is next!`;
         } else {
-          statusDiv.innerHTML = `<span>${oSymbol} is next</span>`;
+          statusDiv.innerHTML = `<span>${oSymbol} is next!</span>`;
         }
       }
 };
@@ -92,7 +92,7 @@ const checkGameStatus = () => {
 //event handlers
 const handleReset = () => {
     xIsNext = true;
-    statusDiv.innerHTML = `${xSymbol} is next`;
+    statusDiv.innerHTML = `${xSymbol} is next!`;
     for (const cellDiv of cellDivs) {
         cellDiv.classList.remove('x');
         cellDiv.classList.remove('o');
