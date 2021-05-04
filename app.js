@@ -33,7 +33,7 @@ const checkGameStatus = () => {
     const bottomMiddle = cellDivs[7].classList[1];
     const bottomRight = cellDivs[8].classList[1];
 
-    // check pokemon
+    // check which pokemon won
     if (topLeft && topLeft === topMiddle && topLeft === topRight)  {
         handleWin(topLeft);
         cellDivs[0].classList.add('won');
@@ -76,7 +76,7 @@ const checkGameStatus = () => {
         cellDivs[6].classList.add('won');   
     } else if (topLeft && topMiddle && topRight && middleLeft && middleMiddle && middleRight && bottomLeft && bottomMiddle && bottomRight) {
         gameIsLive = false;
-        statusDiv.innerHTML = 'Draw';
+        statusDiv.innerHTML = "It's a Draw!";
     } else {
         xIsNext = !xIsNext;
         if (xIsNext) {
@@ -90,6 +90,8 @@ const checkGameStatus = () => {
 
 
 //event handlers
+
+// handles the reset
 const handleReset = () => {
     xIsNext = true;
     statusDiv.innerHTML = `${xSymbol} is next!`;
@@ -100,6 +102,8 @@ const handleReset = () => {
     }
     gameIsLive = true;
 };
+
+//handle when the cell is clicked
 const handleCellClick = (e) => {
     const classList = e.target.classList;
     
